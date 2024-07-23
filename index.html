@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(#1b1bc0, #0a6491);
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        section {
+            background: url(./Emy.jpg);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            background-position: center;
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 14px 0;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            background: #837572;
+            padding: 10px 25px;
+            border-radius: 20px;
+            display: inline-block;
+            width: 120px;
+            transition: 0.5s;
+            position: relative;
+            z-index: 10;
+        }
+
+        ul li a:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+
+        ul li::after {
+            content: attr(data-text);
+            color: #8c5043;
+            background-color: white;
+            border-radius: 20px;
+            padding: 15px 20px;
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            font-weight: 900;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s;
+            width: max-content;
+            left: 50%;
+            top: 5%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: 900;
+            pointer-events: none;
+            transition: 1s;
+        }
+
+        @media (max-width: 767px) {
+            ul li::after {
+                content: attr(data-text);
+                color: #8c5043;
+                background-color: white;
+                border-radius: 15px;
+                padding: 15px 20px;
+                width: 85%;
+                position: absolute;
+                left: 50%;
+                top: 5%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-weight: 700;
+                pointer-events: none;
+                transition: 1s;
+            }
+        }
+
+        ul li:hover:after {
+            opacity: 0.5;
+        }
+    </style>
+    <title>Emily</title>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li data-text="!كالحُبِّ عَذْبَةٌ ، ما أَحْلاها"><a href="#">ِرُوحُك</a></li>
+            <li data-text="!كَطِفْلٍ رَقيقٍ ، ما أَلْطَفَهُ"><a href="#">قَلْبُكِ</a></li>
+            <li data-text="!بِلَونِ العَسَلِ ، ما أَجْمَلَهُما"><a href="#">عَيْنَاكِ</a></li>
+            <li data-text="!كَالشَّمْسِ مُشْرِقٌ ، ما أضْوَأهُ"><a href="#">وَجْهُكِ</a></li>
+            <li data-text="!كَالطَبيعَة جَذَّابٌ ، ما أَبْهاهُ"><a href="#">جَمَالُكِ</a></li>
+            <li data-text="!كَالعُصْفورِ مُغَرِّدٌ ، ما أَنْقَاهُ"><a href="#">صَوْتُكِ</a></li>
+            <li data-text="!كَلَطافَةِ الصَّغيرِ ، ما أَبْهَجَها"><a href="#">لَطَافَتُكِ</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>
